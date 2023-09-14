@@ -42,7 +42,7 @@ ___
 > ##### [_Multibranch Pipeline(With Github-webhook)_](https://blog.knoldus.com/multibranch-pipelinewith-github-webhook/)
 
 
-##### We found out the payload URL should be the URL of our Jenkins server:
+> ##### We found out the payload URL should be the URL of our Jenkins server, formatted like this...:
 #### _[http://][address]:[port]/[github-webhook]/_
 
 | Correct Payload URL                   | 200 Status Code                      |
