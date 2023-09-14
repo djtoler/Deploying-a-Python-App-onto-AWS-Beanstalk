@@ -24,7 +24,7 @@ ___
 > sudo apt install python3.10-venv
 > ````
 
-### _Webhook Payload URL Response_
+### _Webhook Payload URL Response..._
 
 > <p align="center">
 > <img src="https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/webhookreqres.png">
