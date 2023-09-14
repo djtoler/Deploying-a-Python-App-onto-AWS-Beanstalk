@@ -58,7 +58,19 @@ ___
 ## 4. [Extract the zip file that Jenkins will create](https://github.com/djtoler/URL-Shortener-Deployment2/blob/main/ExtractZipFromJenkins.md)
 ## 5. [Deploy the application on AWS Beanstalk](https://scribehow.com/shared/How_to_Create_and_Deploy_a_Python_URL_Shortener_on_AWS_Elastic_Beanstalk__MS9pB8lfRaGFiKAq2FU-cw) 
 
-## Automated version of Jenkins build and AWS Beanstalk deployment .
+## We test our webhook implementation by making a visible change to our app, pushing that change to GitHub and trigger the automatic build, deploy & test in Jenkins.
+
+> ````
+> cd dp3/templates/   #Change directories into the templates folder
+> nano base.html      #Open the base html file to edit the body of the home page of our app
+>
+> #Copy and paste this at the begining of the body tag in the HTML file
+>   <style>
+      body {
+        background-color: red;
+      }
+    </style> 
+
 | Before Webhook                      | After Webhook                               |
 | ----------------------------------- | ----------------------------------- |
 | ![aaaaaa.png]() | ![aaaaaa.png]() |
