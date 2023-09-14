@@ -11,7 +11,7 @@
 ___
 
 # Issues:
-### _Build failure..._
+### _1) Build failure..._
 
 > ##### Our first build failed and our console output showed is the error pictured below. We learned that if we dont have Python and its correct version installed on our Jenkins server, Jenkins wont be able to build our app... and our pipeline will fail. 
 
@@ -24,7 +24,7 @@ ___
 > sudo apt install python3.10-venv
 > ````
 
-### _Webhook Payload URL Response..._
+### _2) Webhook Payload URL Response..._
 > ##### We configure a webhook in Github that will send a message to Jenkins... that will trigger Jenkins to build, test & deploy our app, everytime we push code to GitHub. In the image below, you can see that we need to enter a URL... 
 
 > <p align="center">
