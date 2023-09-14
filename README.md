@@ -38,8 +38,8 @@ ___
 | ![aaaaaa.png](https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/webhookpayloadwrong.png) | ![aaaaaa.png](https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/dp3_webhookfail.PNG) | 
 
 ##### After some Google searching, we came across 2 resources that helped us understand what the payload URL is and how to structure it...
-> ##### _(How to Setup a GitHub to Jenkins Pipeline with WebHooks)_ [https://santoshk.dev/posts/2022/how-to-setup-a-github-to-jenkins-pipeline-with-webhook/]
-> ##### _(Multibranch Pipeline(With Github-webhook)_ [https://blog.knoldus.com/multibranch-pipelinewith-github-webhook/]
+> ##### _[How to Setup a GitHub to Jenkins Pipeline with WebHooks]_ (https://santoshk.dev/posts/2022/how-to-setup-a-github-to-jenkins-pipeline-with-webhook/)
+> ##### _[Multibranch Pipeline(With Github-webhook]_ (https://blog.knoldus.com/multibranch-pipelinewith-github-webhook/)
 
 ##### We found out the payload URL should be the URL of our Jenkins server _"http://address:port/github-webhook/"_
 
