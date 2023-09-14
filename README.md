@@ -9,7 +9,7 @@
   ##### The purpose of our app is documented here [(URL Shortener App V2)](https://github.com/djtoler/URL-Shortener___AWSBeanstalk-Jenkins#purpose)
 
 # Issues:
-### *_Build failure..._ *
+### _Build failure..._
 
 > ##### Our first build failed and our console output showed is the error pictured below. We learned that if we dont have Python and its correct version installed on our Jenkins server, Jenkins wont be able to build our app... and our pipeline will fail. 
 
