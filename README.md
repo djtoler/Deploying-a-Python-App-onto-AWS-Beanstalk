@@ -9,18 +9,18 @@
   ##### The purpose of our app is documented here [(URL Shortener App V2)](https://github.com/djtoler/URL-Shortener___AWSBeanstalk-Jenkins#purpose)
 
 # Issues:
-### *_Build failure..._ *
+> ### *_Build failure..._ *
 
-##### Our first build failed and our console output showed is the error pictured below. We learned that if we dont have Python and its correct version installed on our Jenkins server, Jenkins wont be able to build our app... and our pipeline will fail. 
+> ##### Our first build failed and our console output showed is the error pictured below. We learned that if we dont have Python and its correct version installed on our Jenkins server, Jenkins wont be able to build our app... and our pipeline will fail. 
 
-<p align="center">
-<img src="https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/builderror1.png">
-</p>
+> <p align="center">
+> <img src="https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/builderror1.png">
+> </p>
 
-##### Jenkins depends on our machine to have the necessary Python binaries available to execute the Python code in our application. Like trying to bake a cake with no cake ingredients or baking tools. So we run the command below to give Jenkins what it needs to build our application...
-````
-sudo apt install python3.10-venv
-````
+> ##### Jenkins depends on our machine to have the necessary Python binaries available to execute the Python code in our application. Like trying to bake a cake with no cake ingredients or baking tools. So we run the command below to give Jenkins what it needs to build our application...
+> ````
+> sudo apt install python3.10-venv
+> ````
 
 ##### In here,  
 ````
