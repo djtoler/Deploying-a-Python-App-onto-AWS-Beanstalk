@@ -25,16 +25,27 @@ ___
 > ````
 
 ### _Webhook Payload URL Response..._
+> ##### We configure a webhook in Github that will send a message to Jenkins... that will trigger Jenkins to build, test & deploy our app, everytime we push code to GitHub. In the image below, you can see that we need to enter a URL... 
 
 > <p align="center">
 > <img src="https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/webhookreqres.png">
 > </p>
 
-##### Be sure 
+> ##### On the first attempt, we entered the URL of our application for the payload URL and we got a 403 error response
 
-### *Sending *
+| Wrong Payload URL                   | 403 Error Code                      |
+| ----------------------------------- | ----------------------------------- |
+| ![aaaaaa.png](https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/webhookpayloadwrong.png) | ![aaaaaa.png](https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/dp3_webhookfail.PNG) | 
 
-##### Make sure 
+> ##### After some Google searching, we came across 2 resources that helped us understand what the payload URL is and how to structure it...
+> ##### _[How to Setup a GitHub to Jenkins Pipeline with WebHooks]_ (https://santoshk.dev/posts/2022/how-to-setup-a-github-to-jenkins-pipeline-with-webhook/)
+> ##### _[Multibranch Pipeline(With Github-webhook]_ (https://blog.knoldus.com/multibranch-pipelinewith-github-webhook/)
+
+##### We found out the payload URL should be the URL of our Jenkins server _"http://address:port/github-webhook/"_
+
+| Correct Payload URL                   | 200 Status Code                      |
+| ----------------------------------- | ----------------------------------- |
+| ![aaaaaa.png](https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/webhookpayloadcorrect.png) | ![aaaaaa.png](https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/dp3_webhooksuccessres.PNG) |
 
 # Steps:
 ## 1. [Create a new GitHub repo and download the application files from the source repo](https://github.com/djtoler/URL-Shortener-Deployment2/blob/main/Deployment2DownloadUploadFiles.md)
