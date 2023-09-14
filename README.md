@@ -61,25 +61,33 @@ ___
 ## We test our webhook implementation by making a visible change to our app, pushing that change to GitHub and trigger the automatic build, deploy & test in Jenkins.
 
 > ````
-> cd dp3/templates/   #Change directories into the templates folder
-> nano base.html      #Open the base html file to edit the body of the home page of our app
+> cd dp3/templates/       #Change directories into the templates folder
+> nano base.html          #Open the base html file to make an edit to the body of the home page of our app
 >
-> #Copy and paste this at the begining of the body tag in the HTML file
->   <style>
-      body {
-        background-color: red;
-      }
-    </style> 
+> #We change the background color of the home page to red the push to GitHub
+> 
+> git add.
+> git commit -m'a commit message'
+> git push
+> ````
 
-| Before Webhook                      | After Webhook                               |
+| Before push w/ Webhook                      | After push w/ Webhook                               |
 | ----------------------------------- | ----------------------------------- |
-| ![aaaaaa.png]() | ![aaaaaa.png]() |
+| ![aaaaaa.png](https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/dp3_urlbefore.PNG) | ![aaaaaa.png](https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/redbg.PNG) |
+
+## We can see on our Jenkins server that a build, test and deployment was automatically triggered.
+
+> <p align="center">
+> <img src="https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/autobuild.PNG">
+> </p>
+
 
 # System Diagram:
 ![dp3_diagram.png]()
 
 # Optimization:
+
 <aside>
-✅ To optimize this deployment, I would... 
+✅ To optimize this deployment, I would add shell scripts to set up Jenkins, AWS Beanstalk and our installations to make them both run 
 
 </aside>
