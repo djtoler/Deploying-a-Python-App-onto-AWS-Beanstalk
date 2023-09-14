@@ -41,8 +41,7 @@ ___
 > ##### [_How to Setup a GitHub to Jenkins Pipeline with WebHooks_](https://santoshk.dev/posts/2022/how-to-setup-a-github-to-jenkins-pipeline-with-webhook/)
 > ##### [_Multibranch Pipeline(With Github-webhook)_](https://blog.knoldus.com/multibranch-pipelinewith-github-webhook/)
 
-
-> ##### We found out the payload URL should be the URL of our Jenkins server, formatted like this...:
+##### We found out the payload URL should be the URL of our Jenkins server, formatted like this...:
 #### _[http://][address]:[port]/[github-webhook]/_
 
 | Correct Payload URL                   | 200 Status Code                      |
