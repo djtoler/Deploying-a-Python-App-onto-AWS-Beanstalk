@@ -3,10 +3,10 @@
 </p>
 
 # Purpose:
-#### *Automating the Jenkins build and AWS Beanstalk deployment w/ Webhooks:*
-  ##### Automating the build and deployment phases of a CICD pipeline will eliminate manual work and prevent human errors. We can configure a _"polling"_ setting that will check our repository at time interval that we specify. Using Webhooks, we can configure a _"trigger"_ that will send a signal to Jenkins after every new _"push"_ to our code GitHub code repository. Both methods will automatically build, test and redeploy our app, reducing our deployment time and labor cost.
+> #### *Automating the Jenkins build and AWS Beanstalk deployment w/ Webhooks:*
+> ##### Automating the build and deployment phases of a CICD pipeline will eliminate manual work and prevent human errors. We can configure a _"polling"_ setting that will check our repository at time interval that we specify. Using Webhooks, we can configure a _"trigger"_ that will send a signal to Jenkins after every new _"push"_ to our code GitHub code repository. Both methods will automatically build, test and redeploy our app, reducing our deployment time and labor cost.
 
-  ##### The purpose of our app is documented here [(URL Shortener App V2)](https://github.com/djtoler/URL-Shortener___AWSBeanstalk-Jenkins#purpose)
+>  ##### The purpose of our app is documented here [(URL Shortener App V2)](https://github.com/djtoler/URL-Shortener___AWSBeanstalk-Jenkins#purpose)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 > <img src="https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/webhookreqres.png">
 > </p>
 
-> ##### On the first attempt, we entered the URL of our application for the payload URL and we got a 403 error response
+> #### On the first attempt, we entered the URL of our application for the payload URL and we got a 403 error response
 
 | Wrong Payload URL                   | 403 Error Code                      |
 | ----------------------------------- | ----------------------------------- |
