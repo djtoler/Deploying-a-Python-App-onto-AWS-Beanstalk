@@ -24,14 +24,11 @@ ___
 > sudo apt install python3.10-venv
 > ````
 
-##### In here,  
-````
-sudo nano config.xml
-````
+### _Webhook Payload URL Response_
 
-##### When the 
-
-### *Installing *
+> <p align="center">
+> <img src="https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/webhookreqres.png">
+> </p>
 
 ##### Be sure 
 
