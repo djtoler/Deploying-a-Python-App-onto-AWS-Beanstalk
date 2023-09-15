@@ -185,6 +185,7 @@ ___
 > <img src="https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/autobuild.PNG">
 > </p>
 
+---
 
 # System Diagram:
 ![dp3_diagram.png](https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/dp3_diagram.PNG)
