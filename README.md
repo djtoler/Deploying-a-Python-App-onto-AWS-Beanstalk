@@ -52,14 +52,118 @@ ___
 ___
 
 # Steps:
-## 1. [Create a new GitHub repo and download the application files from the source repo](https://github.com/djtoler/URL-Shortener-Deployment2/blob/main/Deployment2DownloadUploadFiles.md)
-## 2. [Upload files to the new GitHub you created](https://github.com/djtoler/URL-Shortener-Deployment2/blob/main/UploadFilesToGitHub.md)
-## 3. [Set Up Jenkins with Python on an EC2 instance & run the Jenkins Build](https://github.com/djtoler/URL-Shortener-Deployment2/blob/main/Deployment2JenkinsMarkdown.md)
-## 4. [Extract the zip file that Jenkins will create](https://github.com/djtoler/URL-Shortener-Deployment2/blob/main/ExtractZipFromJenkins.md)
-## 5. [Deploy the application on AWS Beanstalk](https://scribehow.com/shared/How_to_Create_and_Deploy_a_Python_URL_Shortener_on_AWS_Elastic_Beanstalk__MS9pB8lfRaGFiKAq2FU-cw) 
+## 1. Clone source code & set up new GH repo
+> ````
+> git --version
+> git clone https://github.com/kura-labs-org/c4_deployment-3.git
+> sudo apt install gh
+> gh auth login
+> gh repo create Deployment3____AWSBeanstalk_Jenkins --public
+> mkdir dp3
+> cp -r c4_deployment-3/* dp3/
+> cd dp3/
+> git init
+> git add .
+> git commit -m"first commit"
+> git branch -M main
+> git remote add origin https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins
+> git push -u origin main
+> cd ~
+> ````
 
-## We test our webhook implementation by making a visible change to our app, pushing that change to GitHub and trigger the automatic build, deploy & test in Jenkins.
+## 2. Install Jenkins
+> ````
+> sudo apt install openjdk-11-jdk
+> apt-get update
+> sudo apt-get update
+> curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee     /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+> echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]     https://pkg.jenkins.io/debian binary/ | sudo tee     /etc/apt/sources.list.d/jenkins.list > /dev/null
+> sudo apt-get update
+> sudo apt-get install fontconfig openjdk-17-jre
+> sudo apt-get install jenkins
+> sudo systemctl start jenkins
+> cat /var/lib/jenkins/secrets/initialAdminPassword
+> sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+> ````
 
+## 3. Install Python, Pip and Unzip
+> ````
+> sudo apt update
+> sudo apt install python-pip
+> sudo apt install python3.10-venv
+> sudo apt install unzip
+> pip3 --version
+> python3.10 -m venv --version
+> ````
+
+## 4. Configure Multi-Branch Jenkins Pipeline
+> ````
+> # Log into Jenkins server
+> # Go to the dashboard
+> # Click "New Item"
+> # Name the project
+> # Choose "Multibranch Pipeline" then "Ok"
+> # Choose "Add Source" and select "GitHub"
+> # Click "Add" next to _'Credentials'_
+> # Add GH repo, username & use a GH token as password
+> ````
+
+## 5. Install AWS CLI
+> ````
+> curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+> unzip awscliv2.zip
+> sudo ./aws/install
+> aws --version
+> aws configure
+> ````
+
+## 6. Configure Jenkins User
+> ````
+> sudo passwd jenkins
+> sudo su - jenkins -s /bin/bash
+> ````
+
+## 7. Install AWS Beanstalk CLI
+> ```
+> pip install awsebcli --upgrade --user
+> export PATH=$PATH:$HOME/.local/bin
+> eb --version
+> aws configure
+> ```
+
+## 8. Initialize & Create AWS Beanstalk Enviornment 
+> ```
+> cd workspace/
+> ls
+> cd dp3_main
+> ls
+> eb init
+> eb create
+> ```
+
+## 9. Add Deployment State to Jenkins File
+> ````
+> sudo apt update
+> sudo apt install python-pip
+> sudo apt install python3.10-venv
+> sudo apt install unzip
+> pip3 --version
+> python3.10 -m venv --version
+> ````
+
+## 10. Configure Webhook
+> ````
+> # Log into GH
+> # Open the project repo
+> # Click Settings > Webhooks > Add Webhook
+> # Enter payload URL
+> # Select "applicaton/json"
+> # Select "just the push event"
+> # Click "Add Webhook"
+> # Look for 200 response from the Webhook ping
+> ````
+
+## 11. Push new code to trigger automatic Jenkins build
 > ````
 > cd dp3/templates/       #Change directories into the templates folder
 > nano base.html          #Open the base html file to make an edit to the body of the home page of our app
