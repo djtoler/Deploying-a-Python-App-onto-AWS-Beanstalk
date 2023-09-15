@@ -141,7 +141,7 @@ ___
 > eb create
 > ```
 
-## 9. Add Deployment State to Jenkins File
+## 9. Add Deployment Stage to Jenkins File
 > ````
 > sudo apt update
 > sudo apt install python-pip
