@@ -19,7 +19,7 @@ ___
 > <img src="https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/builderror1.png">
 > </p>
 
-> ##### Jenkins depends on our machine to have the necessary Python binaries available to execute the Python code in our application. Like trying to bake a cake with no cake ingredients or baking tools. So we run the command below to give Jenkins what it needs to build our application.....
+> ##### Jenkins depends on our machine to have the necessary Python binaries available to execute the Python code in our application. Like trying to bake a cake with no cake ingredients or baking tools. So we run the command below to give Jenkins what it needs to build our application......
 > ````
 > sudo apt install python3.10-venv
 > ````
