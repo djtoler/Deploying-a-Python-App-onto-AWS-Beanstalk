@@ -82,7 +82,6 @@ ___
 > sudo apt-get install fontconfig openjdk-17-jre
 > sudo apt-get install jenkins
 > sudo systemctl start jenkins
-> cat /var/lib/jenkins/secrets/initialAdminPassword
 > sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 > ````
 
