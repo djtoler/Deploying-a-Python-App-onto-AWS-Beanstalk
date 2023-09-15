@@ -190,7 +190,6 @@ ___
 # System Diagram:
 > ![dp3_diagram.png](https://github.com/djtoler/Deployment3____AWSBeanstalk_Jenkins/blob/main/assets/dp3_diagram.PNG)
 
----
 
 # Optimization:
 
