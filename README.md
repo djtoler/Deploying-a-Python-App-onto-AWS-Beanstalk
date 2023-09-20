@@ -142,12 +142,10 @@ ___
 
 ## 9. Add Deployment Stage to Jenkins File
 > ````
-> sudo apt update
-> sudo apt install python-pip
-> sudo apt install python3.10-venv
-> sudo apt install unzip
-> pip3 --version
-> python3.10 -m venv --version
+Go into the Jenkins workspace and cd into our project directory.
+Add the following code snippet to our pipeline
+
+stage ('Deploy') { steps { sh '/var/lib/jenkins/.local/bin/eb deploy' } }
 > ````
 
 ## 10. Configure Webhook
