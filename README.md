@@ -142,10 +142,9 @@ ___
 
 ## 9. Add Deployment Stage to Jenkins File
 > ````
-Go into the Jenkins workspace and cd into our project directory.
-Add the following code snippet to our pipeline
-
-stage ('Deploy') { steps { sh '/var/lib/jenkins/.local/bin/eb deploy' } }
+> Go into the Jenkins workspace and cd into our project directory.
+> Add the following code snippet to our pipeline
+> stage ('Deploy') { steps { sh '/var/lib/jenkins/.local/bin/eb deploy' } }
 > ````
 
 ## 10. Configure Webhook
